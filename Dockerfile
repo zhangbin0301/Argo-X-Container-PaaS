@@ -20,8 +20,8 @@ EXPOSE 3000
 # 更新包管理工具，安装一些必要的工具
 RUN apt update -y &&\
     apt install curl sudo wget unzip iproute2 systemctl -y &&\
-    npm install -r package.json &&\ 
-    npm install -g pm2 &&\
+    npm ci  &&\ 
+    npm install -g pm2 
 
 # 将 root 用户的密码修改为 10086
 RUN echo 'root:10086' | chpasswd
