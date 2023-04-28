@@ -33,7 +33,6 @@ USER 10086
 WORKDIR /app
 
 # 复制配置文件和启动脚本
-COPY nginx.conf /etc/nginx/nginx.conf
 COPY files/* /app/
 
 # 下载并安装 Xray
